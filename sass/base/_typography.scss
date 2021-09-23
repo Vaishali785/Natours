@@ -1,0 +1,84 @@
+.primary-heading {
+  text-transform: uppercase;
+  color: $color-white;
+  backface-visibility: hidden; /* hack to hide the shaking */
+  margin-bottom: 4rem;
+
+  &--main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    display: block;
+
+    @include respond(phone) {
+      //width < 900?
+      font-size: 5rem;
+      letter-spacing: 2rem;
+    }
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.9rem;
+    display: block;
+    animation: moveInRight 1s ease-out; /* shortcut */
+
+    @include respond(phone) {
+      //width < 900?
+      font-size: 1.8rem;
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+.secondary-heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  -webkit-background-clip: text; //required for gradient inside text
+  background-clip: text; //required with -webkit-background-clip
+  color: transparent; //required to hide the original text else it will hide gradient
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    //width < 900?
+    font-size: 3rem;
+    // letter-spacing: 1.5rem;
+  }
+
+  @include respond(phone) {
+    //width < 600?
+    font-size: 2rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.tertiary-heading {
+  font-size: $default-text-font;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-text-font;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

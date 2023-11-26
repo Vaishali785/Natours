@@ -987,3 +987,26 @@ body {
     @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
+
+
+@media screen and (max-width: ){
+ .header__text-box{
+  width: 100vw;
+  overflow-x: hidden;
+  padding-inline: 10px;
+ }
+ .primary-heading--main{
+  font-size: 12vw;
+  letter-spacing: 3.5vw;
+ }
+ .primary-heading--sub {
+    font-size: 4vw;
+    letter-spacing: 2.4vw;
+    font-weight: 500;
+    text-align: center;
+ }
+ .navigation_list{
+  width: 80vw;
+ }
+ 
+}

@@ -989,7 +989,7 @@ body {
         width: 100%; } }
 
 
-@media screen and (max-width: ){
+@media screen and (max-width: 350px ){
  .header__text-box{
   width: 100vw;
   overflow-x: hidden;
